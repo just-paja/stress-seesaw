@@ -134,6 +134,7 @@ module.exports = function (webpackEnv) {
   const getSourceMap = () => (shouldUseSourceMap ? 'source-map' : false)
 
   return {
+    target: 'web',
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     // Stop compilation early in production
     bail: isEnvProduction,
@@ -635,3 +636,5 @@ module.exports = function (webpackEnv) {
     performance: false
   }
 }
+
+console.log(module.exports())
