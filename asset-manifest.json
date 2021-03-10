@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/stress-seesaw/static/css/main.e12c5c29.chunk.css",
-    "main.js": "/stress-seesaw/static/js/main.5947186c.chunk.js",
-    "main.js.map": "/stress-seesaw/static/js/main.5947186c.chunk.js.map",
-    "runtime-main.js": "/stress-seesaw/static/js/runtime-main.ebad7755.js",
-    "runtime-main.js.map": "/stress-seesaw/static/js/runtime-main.ebad7755.js.map",
+    "main.js": "/stress-seesaw/static/js/main.12dc2a98.chunk.js",
+    "main.js.map": "/stress-seesaw/static/js/main.12dc2a98.chunk.js.map",
+    "runtime-main.js": "/stress-seesaw/static/js/runtime-main.4adc38c2.js",
+    "runtime-main.js.map": "/stress-seesaw/static/js/runtime-main.4adc38c2.js.map",
     "static/css/2.7613a097.chunk.css": "/stress-seesaw/static/css/2.7613a097.chunk.css",
-    "static/js/2.8632085b.chunk.js": "/stress-seesaw/static/js/2.8632085b.chunk.js",
-    "static/js/2.8632085b.chunk.js.map": "/stress-seesaw/static/js/2.8632085b.chunk.js.map",
-    "static/js/3.3994cd42.chunk.js": "/stress-seesaw/static/js/3.3994cd42.chunk.js",
-    "static/js/3.3994cd42.chunk.js.map": "/stress-seesaw/static/js/3.3994cd42.chunk.js.map",
+    "static/js/2.78ffe95c.chunk.js": "/stress-seesaw/static/js/2.78ffe95c.chunk.js",
+    "static/js/2.78ffe95c.chunk.js.map": "/stress-seesaw/static/js/2.78ffe95c.chunk.js.map",
+    "static/js/3.2be28eea.chunk.js": "/stress-seesaw/static/js/3.2be28eea.chunk.js",
+    "static/js/3.2be28eea.chunk.js.map": "/stress-seesaw/static/js/3.2be28eea.chunk.js.map",
     "index.html": "/stress-seesaw/index.html",
     "static/css/2.7613a097.chunk.css.map": "/stress-seesaw/static/css/2.7613a097.chunk.css.map",
     "static/css/main.e12c5c29.chunk.css.map": "/stress-seesaw/static/css/main.e12c5c29.chunk.css.map",
-    "static/js/2.8632085b.chunk.js.LICENSE.txt": "/stress-seesaw/static/js/2.8632085b.chunk.js.LICENSE.txt",
+    "static/js/2.78ffe95c.chunk.js.LICENSE.txt": "/stress-seesaw/static/js/2.78ffe95c.chunk.js.LICENSE.txt",
     "static/media/pivot.d52f18f6.svg": "/stress-seesaw/static/media/pivot.d52f18f6.svg",
     "static/media/seesaw.95382bce.svg": "/stress-seesaw/static/media/seesaw.95382bce.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ebad7755.js",
+    "static/js/runtime-main.4adc38c2.js",
     "static/css/2.7613a097.chunk.css",
-    "static/js/2.8632085b.chunk.js",
+    "static/js/2.78ffe95c.chunk.js",
     "static/css/main.e12c5c29.chunk.css",
-    "static/js/main.5947186c.chunk.js"
+    "static/js/main.12dc2a98.chunk.js"
   ]
 }
