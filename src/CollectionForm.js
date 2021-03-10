@@ -2,27 +2,11 @@ import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import ListGroup from 'react-bootstrap/ListGroup'
-import React, { memo, useCallback, useEffect, useRef } from 'react'
+import React, { memo, useEffect } from 'react'
 
 import { useForm, useFieldArray } from 'react-hook-form'
 
 import styles from './CollectionForm.module.scss'
-
-function debounce (func, wait) {
-  const fn = useRef(null)
-  let timeout
-  if (!fn.current) {
-    fn.current = function (...args) {
-      const later = function () {
-        timeout = null
-        func.apply(this, args)
-      }
-      clearTimeout(timeout)
-      timeout = setTimeout(later, wait)
-    }
-  }
-  return fn.current
-}
 
 export const CollectionForm = memo(({ collection, onSubmit }) => {
   const { register, control, handleSubmit, watch } = useForm({
@@ -35,7 +19,6 @@ export const CollectionForm = memo(({ collection, onSubmit }) => {
   const data = watch(undefined, collection)
   useEffect(() => {
     if (JSON.stringify(data) !== JSON.stringify(collection)) {
-      console.log('save', data)
       onSubmit(data)
     }
   }, [data])
