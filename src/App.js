@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import { CollectionForm } from './CollectionForm'
+import { Swing } from './Swing'
 
-function App() {
+import './App.css'
+
+const countWeight = objects =>
+  objects.reduce((aggr, obj) => aggr + obj.weight, 0)
+
+function App () {
+  const [requests, setRequests] = useState([])
+  const [resources, setResources] = useState([])
+  const requestsWeight = countWeight(requests)
+  const resourcesWeight = countWeight(resources)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <header className='App-header'>
+        <h1>Stress swing</h1>
+        <CollectionForm onSubmit={setRequests} collection={requests} />
+        <CollectionForm onSubmit={setResources} collection={resources} />
+        <Swing left={requestsWeight} right={resourcesWeight} />
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
