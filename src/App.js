@@ -1,25 +1,41 @@
-import { useState } from 'react'
-import { CollectionForm } from './CollectionForm'
-import { Swing } from './Swing'
+import React, { useState } from 'react'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
 
-import './App.css'
+import { CollectionForm } from './CollectionForm'
+import { SwingBoard } from './SwingBoard'
+
+import styles from './App.module.css'
 
 const countWeight = objects =>
-  objects.reduce((aggr, obj) => aggr + obj.weight, 0)
+  objects.reduce((aggr, obj) => aggr + parseInt(obj.weight, 10), 0)
 
 function App () {
-  const [requests, setRequests] = useState([])
-  const [resources, setResources] = useState([])
-  const requestsWeight = countWeight(requests)
-  const resourcesWeight = countWeight(resources)
+  const [requests, setRequests] = useState({ data: [] })
+  const [resources, setResources] = useState({ data: [] })
+  console.log(requests, resources)
+
+  const requestsWeight = countWeight(requests.data)
+  const resourcesWeight = countWeight(resources.data)
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <h1>Stress swing</h1>
-        <CollectionForm onSubmit={setRequests} collection={requests} />
-        <CollectionForm onSubmit={setResources} collection={resources} />
-        <Swing left={requestsWeight} right={resourcesWeight} />
-      </header>
+    <div>
+      <div className={styles.forms}>
+        <Container>
+          <h1>Stress swing</h1>
+          <Row>
+            <Col lg={6}>
+              <h2>Requirements</h2>
+              <CollectionForm onSubmit={setRequests} collection={requests} />
+            </Col>
+            <Col lg={6}>
+              <h2>Resources</h2>
+              <CollectionForm onSubmit={setResources} collection={resources} />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <SwingBoard left={requestsWeight} right={resourcesWeight} />
     </div>
   )
 }

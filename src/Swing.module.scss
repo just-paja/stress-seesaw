@@ -1,0 +1,25 @@
+.seesaw {
+  width: 100%;
+  position: relative;
+  pointer-events: none;
+  height: 300px;
+}
+
+.ssObject {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.pivot {
+  top: 0;
+  width: 25%;
+}
+
+.board {
+  transform-origin: bottom center;
+  top: 0;
+  z-index: 1;
+  transition: all 1s;
+}

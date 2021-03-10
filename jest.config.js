@@ -1,3 +1,3 @@
 const { guessProjectConfig } = require('lerna-jest')
 
-guessProjectConfig(__dirname)
+module.exports = guessProjectConfig(__dirname)

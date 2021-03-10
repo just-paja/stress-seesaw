@@ -1,0 +1,5 @@
+.forms {
+  z-index: 1000;
+  position: relative;
+  background: rgba(255,255,255,.85);
+}
