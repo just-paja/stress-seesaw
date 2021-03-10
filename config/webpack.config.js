@@ -635,5 +635,3 @@ module.exports = function (webpackEnv) {
     performance: false
   }
 }
-
-console.log(module.exports())
